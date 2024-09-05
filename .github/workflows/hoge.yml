@@ -12,4 +12,4 @@ jobs:
       - name: Build
         run: |
           echo "Build"
-          aws s3 ls
+          which aws
