@@ -1,20 +1,15 @@
 name: hoge
 
 on:
-  push:
-    branches:
-      - hoge
   workflow_dispatch:
 
 jobs:
   hogejob:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Build
         run: |
           echo "Build"
-      - name: Test
-        run: |
-          echo "Test"
+          aws s3 ls
